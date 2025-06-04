@@ -47,6 +47,23 @@ a.icon {
   top: 0;
 }
 
+button {
+  background-color: #ab886d;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #493628;
+}
+
 @media only screen and (min-width: 601px) {
   a.icon {
     display: none;
