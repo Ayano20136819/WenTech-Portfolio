@@ -1,0 +1,43 @@
+.icon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icon-content h3 {
+  font-size: 3vh;
+}
+
+.myicon {
+  width: 200px;
+}
+
+.mydetails {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 601px) {
+  #content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-content {
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+
+  .icon-content h3 {
+    font-size: 5vh;
+  }
+  .mydetails {
+    width: 700px;
+    margin: 30px;
+  }
+
+  .mydetails p {
+    font-size: 20px;
+  }
+}
