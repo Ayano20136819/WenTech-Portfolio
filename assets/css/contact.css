@@ -91,4 +91,10 @@ input[type="submit"]:hover {
   #inputs label {
     padding: 10px;
   }
+
+  #name-error,
+  #email-error,
+  #message-error {
+    margin-left: 140px;
+  }
 }
