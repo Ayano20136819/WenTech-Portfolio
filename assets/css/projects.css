@@ -6,17 +6,101 @@
   font-size: 30px;
   margin: 30px 0 10px;
   color: #493628;
-}
-
-#content h4 {
-  font-size: 20px;
-  color: #493628;
-  margin: 0;
+  text-align: center;
 }
 
 #content p {
   font-size: 20px;
   margin: 5px 0 20px;
+}
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card {
+  background-image: url(/assets/img/project.jpg);
+  background-size: cover;
+  width: 260px;
+  height: 160px;
+  padding: 20px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.project-card::after {
+  content: "";
+  opacity: 50%;
+  background-color: #e4e0e1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+
+.project-card h4 {
+  font-size: 30px;
+  color: #493628;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.project-card li {
+  position: relative;
+  z-index: 1;
+}
+.projectLinkBtn {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0;
+}
+
+.projectLinkBtn:hover {
+  background-color: #493628;
+}
+.sampleProjectsBtn {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+.sampleProjectsBtn button {
+  background-color: #493628;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin: 10px auto;
+  font-size: 20px;
+  width: 300px;
+}
+
+.sampleProjectsBtn button:hover {
+  background-color: #000;
+  font-weight: bold;
+}
+.slider {
+  width: 100%;
+}
+
+#slide-btn {
+  display: block;
+  width: 90%;
+  margin: 0 auto 1em auto;
+  text-align: right;
+  padding: 7px;
+  border-top: 1px solid #aaa;
+  color: #aaa;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#slide-contents {
+  width: 100%;
+  margin: 0 0 1.6em 0;
+  display: flex;
 }
 
 @media only screen and (min-width: 601px) {
@@ -25,12 +109,19 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 600px;
+    max-width: 700px;
     margin: 40px auto;
   }
 
   #content h3 {
+    width: 100%;
     font-size: 30px;
     margin: 20px 0 10px;
+  }
+
+  .project-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
