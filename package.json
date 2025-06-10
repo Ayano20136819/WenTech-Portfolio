@@ -1,0 +1,26 @@
+{
+  "name": "wentech-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayano20136819/WenTech-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayano20136819/WenTech-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Ayano20136819/WenTech-Portfolio#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.8"
+  },
+  "description": ""
+}

@@ -30,3 +30,5 @@ This is "mobile first", responsive, Portfolio Website.
 ## References
 
 https://www.geeksforgeeks.org/html/form-validation-using-javascript/
+
+https://prograshi.com/design/css/hamburger-menu-that-transforms-with-a-click/
