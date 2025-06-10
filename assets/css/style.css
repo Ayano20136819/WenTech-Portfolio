@@ -2,49 +2,122 @@ body {
   margin: 0;
 }
 #header {
+  z-index: 10;
   overflow: hidden;
-  position: relative;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
   background-color: #d6c0b3;
+  top: 0;
 }
 
 h1 {
   margin: 0;
-  height: 100px;
+  height: 80px;
 }
 
 .logo {
   height: 80px;
-  margin: 10px;
 }
 
-#header #myLinks {
-  display: none;
+#myLinks {
   list-style: none;
   padding: 5px;
   text-align: center;
-  border-top: 1px solid #493628;
   margin: 0;
+  display: none;
 }
 
-nav ul li {
-  padding: 15px 10px;
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  padding: 0;
+  background: #d6c0b3;
+  z-index: 15;
+  left: 0;
 }
 
-#header #myLinks a {
+.menu li {
+  padding: 10px;
+}
+
+.menu a {
   text-decoration: none;
-  color: #493628;
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-transform: capitalize;
+
+  transition: opacity 0.5s;
 }
 
-a.icon {
-  margin: 20px;
-  color: #493628;
-  font-size: 50px;
+.menu-btn {
+  display: none;
+}
+
+/* ハンバーガーアイコンの位置と挙動 */
+.menu-icon {
+  display: inline-block;
+  position: relative;
+  padding: 20px; /* クリック領域を拡大 */
+  cursor: pointer;
+  z-index: 20; /* 他の要素より手前に */
+  background: transparent; /* 背景が邪魔しないように */
+}
+
+.navicon {
+  background: gray;
   display: block;
+  height: 3px;
+  width: 26px;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  right: 0;
+  background: gray;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before {
+  top: 9px;
+}
+
+.navicon:after {
+  bottom: 9px;
+}
+
+/* 上側の線のアニメーション */
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+/* 下側の線のアニメーション */
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+/* メニュークリック時の上の線の開始位置 */
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
   top: 0;
+}
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  bottom: 0;
+}
+
+/* メニュークリック時の真ん中の線（透明にする） */
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
 }
 
 button {
@@ -110,6 +183,10 @@ button:hover {
 
 /* pages */
 
+main {
+  margin-top: 80px;
+}
+
 #page-header {
   background-image: url("/assets/img/background.jpg");
   background-size: cover;
@@ -128,10 +205,6 @@ button:hover {
 }
 
 @media only screen and (min-width: 601px) {
-  a.icon {
-    display: none;
-  }
-
   #header {
     display: flex;
     flex-direction: row;
@@ -139,21 +212,30 @@ button:hover {
     align-items: center;
   }
 
+  #header label {
+    display: none;
+  }
+
   #header #myLinks {
     display: flex;
     border-top: none;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    position: initial;
   }
 
   nav li {
     display: inline-block;
   }
 
-  nav li:hover {
-    border-bottom: 2px solid #493628;
+  .menu a {
+    font-size: 15px;
   }
 
-  #header #myLinks a {
-    font-size: 18px;
+  nav li:hover {
+    border-bottom: 2px solid #493628;
   }
 
   #content {

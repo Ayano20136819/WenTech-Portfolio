@@ -18,7 +18,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="sticky top-0 flex flex-row">
       <h1>
         <a href="index.html">
           <img src="assets/img/logo.jpg" alt="Portfolio Logo" class="logo" />
@@ -26,19 +26,21 @@
       </h1>
 
       <nav>
-        <ul id="myLinks">
+        <ul id="myLinks" class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Me</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="mywork.html">Sample Project</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <link rel="stylesheet" href="src/output.css" />
         </ul>
       </nav>
 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <input type="checkbox" class="menu-btn" id="menu-btn" onclick="myNav()" />
+      <label for="menu-btn" class="menu-icon"
+        ><span class="navicon"></span
+      ></label>
     </header>
 
     <main>
