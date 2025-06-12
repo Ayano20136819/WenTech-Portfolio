@@ -15,7 +15,7 @@ function checkForm() {
 
   let isValid = true;
 
-  const result = document.createElement("p");
+  //const result = document.createElement("p");
 
   if (name === "" || !nameRegex.test(name)) {
     document.getElementById("name-error").textContent = "Name is required.";
