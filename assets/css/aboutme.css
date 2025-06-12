@@ -14,7 +14,7 @@
 }
 
 .mydetails {
-  margin: 0 10px;
+  margin: 10px;
   font-size: 18px;
 }
 
@@ -29,9 +29,6 @@
     flex-wrap: wrap;
   }
 
-  .icon-content h3 {
-    font-size: 5vh;
-  }
   .mydetails {
     width: 700px;
     margin: 30px;
