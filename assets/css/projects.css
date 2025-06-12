@@ -7,6 +7,7 @@
   margin: 30px 0 10px;
   color: #493628;
   text-align: center;
+  font-weight: bold;
 }
 
 #content p {
@@ -22,8 +23,8 @@
 .project-card {
   background-image: url(/assets/img/project.jpg);
   background-size: cover;
-  width: 260px;
-  height: 160px;
+  width: 300px;
+  height: 200px;
   padding: 20px;
   position: relative;
   margin: 20px auto;
@@ -46,6 +47,7 @@
   margin: 0;
   z-index: 1;
   position: relative;
+  font-weight: bold;
 }
 
 .project-card li {
