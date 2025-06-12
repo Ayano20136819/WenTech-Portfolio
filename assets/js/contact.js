@@ -1,5 +1,5 @@
 // Form Validation
-const nameRegex = /^[a-zA-Z]$/;
+const nameRegex = /^[a-zA-Z\s]+$/;
 const emailRegex = /^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,})$/;
 
 const btn = document.getElementById("submitBtn");
