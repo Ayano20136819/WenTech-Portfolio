@@ -183,6 +183,13 @@ button:hover {
   padding: 10px;
   margin: 0;
 }
+.copyright a {
+  font-weight: bold;
+}
+
+.copyright a:hover {
+  color: #493628;
+}
 
 /* pages */
 

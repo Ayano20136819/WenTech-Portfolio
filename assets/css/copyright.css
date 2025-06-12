@@ -1,0 +1,35 @@
+/* copyright page */
+
+.copyright-card {
+  margin: 20px 10px;
+}
+
+.resources {
+  margin: 10px;
+}
+
+.web-card {
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px dotted gray;
+}
+
+.web-card h4 {
+  font-weight: bold;
+  color: #ab886d;
+}
+
+.web-card p {
+  padding: 5px;
+}
+
+.web-card a {
+  color: #aaa;
+}
+
+@media only screen and (min-width: 601px) {
+  .web-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
